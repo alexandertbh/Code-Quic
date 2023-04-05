@@ -1,0 +1,87 @@
+<!-- GIVEN I am taking a code quiz
+WHEN I click the start button
+THEN a timer starts and I am presented with a question
+WHEN I answer a question
+THEN I am presented with another question
+WHEN I answer a question incorrectly
+THEN time is subtracted from the clock
+WHEN all questions are answered or the timer reaches 0
+THEN the game is over
+WHEN the game is over
+THEN I can save my initials and my score -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./reset.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <h1>Coding Quiz</h1>
+      <ul>
+        <button id="high-score">High Scores</button>
+        <li id="score">Score: 0</li>
+        <li id="timer">Timer: 60</li>
+      </ul>
+    </header>
+    <section id="start-page">
+      <h2>Instructions:</h2>
+      <p>Welcome to the coding quiz! Press the start button to get going!</p>
+      <button id="start">Start Button</button>
+    </section>
+    <section class="hidden" id="question-one">
+      <h2 id="question-number">Question <span id="questionNum"></span>:</h2>
+      <p id="question">
+        What is the is it called when a camera sensor is given more power to
+        increase it's sensitivity to light?
+      </p>
+      <button id="a">A: Shutter Speed</button>
+      <button id="b">B: Aperture</button>
+      <button id="c">C: ISO</button>
+      <button id="d">D: White-Balance</button>
+    </section>
+    <section id="score-board">
+      <h2 id="current-score">High-Scores:</h2>
+      <input type="Name" name="Name" id="ScoreName" />
+      <button id="add-score">Submit</button>
+      <ol id="high-scores-li"></ol>
+    </section>
+    <!-- <section class="hidden" id="question-two">
+      <h2 id="question-number">Question 2:</h2>
+      <p id="question">
+        How do you incease or decrease the speed at which a photo is taken?
+      </p>
+      <button id="a">A: Change the Aperture</button>
+      <button id="b">B: Change the Shutter Speed</button>
+      <button id="c">C: Change the ISO</button>
+      <button id="d">D: Change the White Balance</button>
+    </section>
+    <section class="hidden" id="question-three">
+      <h2 id="question-number">Question 3:</h2>
+      <p id="question">
+        What setting controles the color temperture of a photo or video?
+      </p>
+      <button id="a">A: Shutter Speed</button>
+      <button id="b">B: Aperture</button>
+      <button id="c">C: ISO</button>
+      <button id="d">D: White-Balance</button>
+    </section> -->
+    <script src="script.js"></script>
+  </body>
+</html>
+
+<!-- container for high scores -->
+<!-- container for count down timer -->
+<!-- container for quiz -->
+<!--    start button -->
+<!--        container for question -->
+<!--        container for answers -->
+<!--            container for each answer -->
+<!--        input for name or initials /High Score -->
+<!--        container for the finished message  -->
+<!--        save button for initials -->
