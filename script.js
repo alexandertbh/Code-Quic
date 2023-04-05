@@ -19,6 +19,7 @@ var scoreBoardEl = document.getElementById("score-board");
 var currentScore = document.getElementById("current-score");
 var ScoreName = document.getElementById("ScoreName").value;
 var highScoreLink = document.getElementById("high-score");
+var heading = document.getElementById("heading");
 
 scoreBoardEl.style.display = "none";
 questionOne.style.display = "none";
@@ -62,23 +63,6 @@ var questionTwo = {
   Answer: "Option D",
 };
 
-// define questions
-// define variables for trakcing
-//      track time
-//      track questions
-
-//create variables to reference DOM elements
-//      question
-//      answers
-//      timer
-//      start button
-//      NOTE: When doing hide and show use classes
-//      name /initials
-//      submit button
-//      high score container
-
-//function
-
 function startGame(event) {
   event.preventDefault();
   setTime();
@@ -112,9 +96,6 @@ function RotateQuestions() {
   answerD.style.color = "black";
 }
 
-//function
-//      handle answer clicks
-
 function determineAnswer(event) {
   event.preventDefault();
 
@@ -141,20 +122,16 @@ function determineAnswer(event) {
   }
 }
 
-//when out of questions within the check answer function. If the indexx is the last one in the array. If indexNum is = questions.length-1 then take them to the highscores page and if not run the function again.
-
 function setTime() {
   var timerInterval = setInterval(function () {
     secondsLeft--;
     timer.textContent = "Timer: " + secondsLeft;
 
     if (secondsLeft === 0) {
-      // Stops execution of action at set interval
       clearInterval(timerInterval);
       questionOne.style.display = "none";
       scoreBoardEl.style.display = "flex";
       currentScore.textContent = "High-Score: " + score;
-      // Calls function to create and append image
     }
   }, 1000);
 }
@@ -167,13 +144,16 @@ function SaveScore(event) {
   localStorage.setItem("name", ScoreName);
   highScoreLi.innerHTML = "<li>" + ScoreName + ": " + score + "</li>";
 }
-//function
-//      saving high scores
 
-//function
-//      listening for key presses
-
-//
+function resetPage(event) {
+  event.preventDefault();
+  indexNum = 0;
+  secondsLeft = 60;
+  score = 0;
+  startPage.style.display = "flex";
+  questionOne.style.display = "none";
+  scoreBoardEl.style.display = "none";
+}
 
 startBtn.addEventListener("click", startGame);
 answerA.addEventListener("click", determineAnswer);
@@ -182,3 +162,4 @@ answerC.addEventListener("click", determineAnswer);
 answerD.addEventListener("click", determineAnswer);
 addScore.addEventListener("click", SaveScore);
 highScoreLink.addEventListener("click", scorePage);
+heading.addEventListener("click", resetPage);
