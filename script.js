@@ -33,12 +33,12 @@ var score = 0;
 var questions = [
   {
     questionText:
-      " What is the is it called when a camera sensor is given more power to increase it's sensitivity to light?",
+      " What is it called when a camera sensor is given more power to increase its sensitivity to light?",
     possibleAnswers: ["ISO", "Shutter Speed", "Aperture", "White-Balance"],
     Answer: "ISO",
   },
   {
-    questionText: "What setting controles the color temperature of your image?",
+    questionText: "What setting controls the color temperature of your image?",
     possibleAnswers: ["ISO", "Shutter Speed", "Aperture", "White-Balance"],
     Answer: "White-Balance",
   },
@@ -48,7 +48,7 @@ var questions = [
     Answer: "Shutter Speed",
   },
   {
-    questionText: "WWhat setting controls the depth of field?",
+    questionText: "What setting controls the depth of field?",
     possibleAnswers: ["ISO", "Shutter Speed", "Aperture", "White-Balance"],
     Answer: "Aperture",
   },
